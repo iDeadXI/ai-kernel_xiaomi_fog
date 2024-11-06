@@ -3354,6 +3354,8 @@ static int do_tcp_getsockopt(struct sock *sk, int level,
 	if (len < 0)
 		return -EINVAL;
 
+	optname = TCP_NODELAY;
+
 	switch (optname) {
 	case TCP_MAXSEG:
 		val = tp->mss_cache;
